@@ -137,7 +137,7 @@ func (daemon *Daemon) Containers(config *ContainersConfig) ([]*types.Container, 
 			Names: names[container.ID],
 		}
 
-		var img := container.Config.Image
+		img := container.Config.Image
 		_, tag := parsers.ParseRepositoryTag(container.Config.Image)
 
 		// #12595 Must not show :latest on images where the tag moved
